@@ -15,10 +15,10 @@ class Board
         end
     end
 
-    def print
+    def print_rows
         @rows.each do |row|
             row.each do |cell|
-                "|" + (cell == 1) ? "1" : "0" + "|"
+                "|" + (cell == 1) ? "*" : "-" + "|"
             end
         end
     end
