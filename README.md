@@ -1,5 +1,5 @@
 # Ruby_Conways_Game_of_Life
-https://travis-ci.org/GrandSuccess87/Ruby_Conways_Game_of_Life_.svg?branch=master
+!https://travis-ci.org/GrandSuccess87/Ruby_Conways_Game_of_Life_.svg?branch=master!:https://travis-ci.org/GrandSuccess87/Ruby_Conways_Game_of_Life_
 
 **SUMMARY**
 
