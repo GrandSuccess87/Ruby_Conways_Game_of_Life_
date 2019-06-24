@@ -1,21 +1,19 @@
 require 'board'
 
-RSpec.describe Board, "find_neighbors" do
-    it "edge square knows its neighbors" do
-        board = Board.new(4)
+RSpec.describe Board, "#rows" do
+    it "returns the cells as rows" do
+        board = Board.new(2)
 
-        neighbors = Board.find_neighbors(board, { x: 0, y: 1 })
+        rows = board.rows
 
-        expected_neighbors = [
-            { x: 0, y: 0 },
-            { x: 0, y: 2 },
-            { x: 1, y: 0 },
-            { x: 1, y: 1 },
-            { x: 1, y: 2 },
-            { x: 3, y: 0 },
-            { x: 3, y: 1 },
-            { x: 3, y: 2 },
-        ]
-        expect(neighbors).to eq expected_neighbors
+        expect(rows).to eq [[0, 0], [0, 0]]
+    end
+
+    it "returns the cells as rows for a different dimension" do
+        board = Board.new(3)
+
+        rows = board.rows
+
+        expect(rows).to eq [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
     end
 end
