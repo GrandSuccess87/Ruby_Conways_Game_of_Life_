@@ -25,4 +25,12 @@ RSpec.describe Board, "#rows" do
         expect(rows).to eq [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
     end
 
+    it "returns the cells as rows in two dimensions" do
+        board = Board.new(2) {Board.new}
+
+        rows = board.rows
+
+        expect(rows).to eq [[0, 0], [0, 0]]
+    end
+
 end
