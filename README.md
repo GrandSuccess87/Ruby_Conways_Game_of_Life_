@@ -1,5 +1,6 @@
 # Ruby_Conways_Game_of_Life
 [![Build Status](https://travis-ci.org/GrandSuccess87/Ruby_Conways_Game_of_Life_.svg?branch=master)](https://travis-ci.org/GrandSuccess87/Ruby_Conways_Game_of_Life_)
+
 **SUMMARY**
 
 This is a command line interface application that allows the user to view cellular automation in a two-dimensional universe.  
