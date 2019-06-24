@@ -16,6 +16,7 @@ Conways Game of Life is a zero-player game because it actually does not require 
 ---
 
 **RULES**
+
 The universe of *Game of Life* is infinite and each cell has one of two possible states: unpopulated or populated.
 
 Every cell interacts with its eight neighbors, which are horizontally, vertically, and diagonally adjacent. 
