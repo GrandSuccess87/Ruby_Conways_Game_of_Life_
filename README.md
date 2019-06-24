@@ -31,3 +31,7 @@ At each second in time, the following rules apply:
 To read the complete overview of origins, algorithms, rules, example patterns and more please click [here](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules). 
 
 ___
+
+**INSTRUCTIONS**
+To run the application type: `ruby lib/main.rb` 
+To run the test watcher type: `bundle exec guard`
