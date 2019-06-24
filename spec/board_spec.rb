@@ -1,19 +1,19 @@
-require 'board'
+# require 'board'
 
-RSpec.describe Board, "#rows" do
-    it "returns the cells as rows" do
-        board = Board.new(2)
+# RSpec.describe Board, "#rows" do
+#     it "returns the cells as rows" do
+#         board = Board.new(2)
 
-        rows = board.rows
+#         rows = board.rows
 
-        expect(rows).to eq [[0, 0], [0, 0]]
-    end
+#         expect(rows).to eq [[0, 0], [0, 0]]
+#     end
 
-    it "returns the cells as rows for a different dimension" do
-        board = Board.new(3)
+#     it "returns the cells as rows for a different dimension" do
+#         board = Board.new(3)
 
-        rows = board.rows
+#         rows = board.rows
 
-        expect(rows).to eq [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
-    end
-end
+#         expect(rows).to eq [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+#     end
+# end
