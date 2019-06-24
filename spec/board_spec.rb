@@ -6,7 +6,7 @@ RSpec.describe Board, "#rows" do
 
         rows = board.rows
 
-        expect(rows).to eq [[0, 0], [0, 0]]
+        expect(rows).to eq [[[0, 0]]]
     end
 
     it "returns the cells as rows for a different dimension" do
@@ -14,6 +14,7 @@ RSpec.describe Board, "#rows" do
 
         rows = board.rows
 
-        expect(rows).to eq [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+        expect(rows).to eq [[[0, 0, 0]]]
+        # expect(rows).to eq [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
     end
 end
