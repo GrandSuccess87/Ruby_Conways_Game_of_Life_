@@ -8,19 +8,20 @@ class Board
     end
 
     def build_rows(row_count)
+        # binding.pry
         @rows = [1..row_count].to_a.map do |row|
-            row.to_a.map { |r| 0 } 
-            # binding.pry        
+            row.to_a.map { |r| [0, 0] } 
         end
+        @rows.shift
     end
 
     def print_rows
-
+        # binding.pry
         @rows.each do |row|
             row.each do |cell|
-                "|" + (cell == 1) ? "*" : "-" + "|"
-                binding.pry
-
+                n = rows.count
+                total_number_of_rows = n.times.collect{"|" + ((cell == 1) ? "*" : "-") + "|"}.join()
+                puts total_number_of_rows
             end
         end
     end

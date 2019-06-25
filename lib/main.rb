@@ -1,8 +1,5 @@
 require_relative 'board'
 
-board = Board.new(4) {Board.new}
-puts "Build Rows Method"
-puts board.rows
-
-puts "Print Rows Method"
-puts board.rows
+board = Board.new(15) 
+puts "Print Rows Method \n"
+print board.print_rows 
