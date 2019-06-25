@@ -6,7 +6,31 @@ RSpec.describe Board, "#rows" do
 
         rows = board.rows
 
-        expect(rows).to eq [[0, 0], [0, 0]]
+        expect(rows).to eq [[0], [0]]
+    end
+
+    it "returns the cells as rows" do
+      board = Board.new(4)
+
+      rows = board.rows
+
+      expect(rows).to eq [[0], [0], [0], [0]]
+    end
+
+    it "returns the cells as rows" do
+      board = Board.new(10)
+
+      rows = board.rows
+
+      expect(rows).to eq [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]
+    end
+
+    it "returns the cells as rows" do
+      board = Board.new(15)
+
+      rows = board.rows
+
+      expect(rows).to eq [[0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]
     end
 
 end
