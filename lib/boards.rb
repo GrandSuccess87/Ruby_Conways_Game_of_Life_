@@ -7,25 +7,5 @@ class Boards
             end
         end
         board.rows()
-    #     [
-    #         {
-    #             x: x, y: y - 1
-    #         },
-    #         {
-    #             x: x, y: y + 1
-    #         },
-    #         {
-    #             x: x + 1, y: y - 1
-    #         },
-    #         {
-    #             x: x + 1, y: y
-    #         },
-    #         {
-    #             x: x + 1, y: y + 1
-    #         },
-    #         {
-    #             x: x + 3, y: y
-    #         },
-    # ]
     end
 end
