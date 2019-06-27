@@ -1,6 +1,22 @@
 require 'board'
 
 RSpec.describe Board, "#rows" do
+    it "returns 0 cells as a row" do
+      board = Board.new(0)
+
+      rows = board.rows
+
+      expect(rows).to eq []
+    end
+
+    it "returns 1 cell as a row" do
+      board = Board.new(1)
+
+      rows = board.rows
+
+      expect(rows).to eq [[0]]
+    end
+
     it "returns the cells as rows" do
         board = Board.new(2)
 
