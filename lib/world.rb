@@ -11,7 +11,9 @@ class World
       world.add_cell(location)
     end
 
-    def adjacent_neighbors(x, y)
+    def adjacent_neighbors(location)
+      x = location.x
+      y = location.y
       [[x,y+1], [x+1,y+1], [x+1,y], [x+1,y-1], [x-1,y-1], [x,y-1], [x-1,y+1], [x-1,y]]
     end
 
