@@ -10,11 +10,11 @@ class Cell
   end
 
   def update_nonliving_cell_status
-    @alive == false ? true: false
+    @alive = true
   end
 
-  def update_living_cell_status
-    @alive == true ? false: true
+  def update_living_status
+    @alive = false
   end
 
 end

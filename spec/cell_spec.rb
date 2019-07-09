@@ -12,17 +12,17 @@ RSpec.describe Cell, "#cell" do
   it "updates a not living cells status to living" do
     cell = Cell.new
 
-    new_living_cell_status = cell.update_nonliving_cell_status
+    cell.update_nonliving_cell_status
 
-    expect(new_living_cell_status).to eq true
+    expect(cell.isAlive?).to eq true
   end
 
   it "updates a living cells status to not living" do
     cell = Cell.new
 
-    nonliving_cell_status = cell.update_nonliving_cell_status
-    new_living_cell_status = nonliving_cell_status.update_living_cell_status
+    cell.update_nonliving_cell_status
+    cell.update_living_status
 
-    expect(new_living_cell_status).to eq false
+    expect(cell.isAlive?).to eq false
   end
 end
