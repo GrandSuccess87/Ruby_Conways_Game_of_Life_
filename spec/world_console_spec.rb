@@ -31,6 +31,7 @@ RSpec.describe WorldConsole, "#world_to_string" do
       world = World.add_living_cell(World.new(15), Location.new(0,0))
       world_as_string = WorldConsole.world_to_string(world)
 
+
       expected_board_as_string =
 "|*|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
 |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
@@ -57,6 +58,7 @@ RSpec.describe WorldConsole, "#world_to_string" do
 
 
       world_as_string = WorldConsole.world_to_string(world_with_two_cells)
+
 
       expected_board_as_string =
 "|*|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
