@@ -11,6 +11,10 @@ class World
       world.add_cell(location)
     end
 
+    def adjacent_neighbors(x, y)
+      [[x,y+1], [x+1,y+1], [x+1,y], [x+1,y-1], [x-1,y-1], [x,y-1], [x-1,y+1], [x-1,y]]
+    end
+
     def build_rows(number_of_rows)
         number_of_rows.times.map do
             Array.new(number_of_rows)

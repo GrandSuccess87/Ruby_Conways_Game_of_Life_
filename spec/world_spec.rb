@@ -55,3 +55,16 @@ RSpec.describe World, "#rows" do
       expect(rows.first.size).to eq 15
     end
 end
+
+RSpec.describe World, "#neighbors" do
+  it "returns the 8 adjacent neighbors [0,0]" do
+    world = World.new(5)
+    location = Location.new(0,0)
+
+    neighbors = [[0,1], [1,1], [1,0], [1,-1], [-1,-1], [0,-1], [-1,1], [-1,0]]
+
+    expect(world.adjacent_neighbors(location)).to eq = neighbors
+
+
+  end
+end
