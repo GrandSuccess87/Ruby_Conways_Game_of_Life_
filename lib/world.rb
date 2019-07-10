@@ -1,8 +1,6 @@
-require 'pry'
 class World
     attr_reader :rows
     attr_reader :living_cells
-    attr_reader :grid
 
     def initialize(number_of_rows, living_cells = [])
         @rows = build_rows(number_of_rows)
@@ -14,19 +12,18 @@ class World
             world.add_cell(location)
     end
 
+    def add_cell_to_world(cell, location)
+      x = location.x
+      y = location.y
+      @rows[x][y] = cell
+    end
+
     def fill_world(cell)
-        world = Array.new
         @rows.each do |row|
           row.each_with_index do |spot, index|
             row[index] = cell
           end
         end
-    end
-
-    def self.add_cell_to_world(cell, location)
-      x = location.x
-      y = location.y
-      @rows[x][y] = cell
     end
 
     def cell_count
@@ -41,6 +38,24 @@ class World
         number_of_rows.times.map do
             Array.new(number_of_rows)
         end
+    end
+
+    def set_living_at(location)
+      x = location.x
+      y = location.y
+      @cell.update_nonliving_cell_status
+      @cell.isAlive?
+    end
+
+    def set_dead_at(location)
+      x = location.x
+      y = location.y
+      @cell.update_living_status
+      @cell.isAlive?
+    end
+
+    def aliveAt?(location)
+      set_dead_at(location)
     end
 
     def add_cell(cell_location)
