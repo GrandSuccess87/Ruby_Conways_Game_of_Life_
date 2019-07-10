@@ -10,7 +10,7 @@ RSpec.describe World, "#rows" do
       expect(rows.size).to eq 0
     end
 
-    it "returns an empty world of size 2" do
+    it "returns an empty world of size 1" do
       world = World.new(1)
 
       rows = world.rows
@@ -57,6 +57,23 @@ RSpec.describe World, "#rows" do
 end
 
 RSpec.describe World, "#neighbors" do
+  it "returns no neighbors for an empty world" do
+    world = World.new(0)
+
+    neighbors = [[]]
+
+    expect(world.get_neighbors).to eq neighbors
+  end
+
+  it "returns no neighbors for two cells that are not adjacent to each other" do
+    world_with_one_cell = World.add_living_cell(World.new(5), Location.new(1,2))
+    world_with_two_cells = World.add_living_cell(world_with_one_cell, Location.new(1,5))
+
+    neighbors = [[]]
+
+    expect(world_with_two_cells.get_neighbors).to eq neighbors
+  end
+
   it "returns the 8 adjacent neighbors of [0,0]" do
     world = World.new(5)
     location = Location.new(0,0)
@@ -64,7 +81,15 @@ RSpec.describe World, "#neighbors" do
     neighbors = [[0,1], [1,1], [1,0], [1,-1], [-1,-1], [0,-1], [-1,1], [-1,0]]
 
     expect(world.adjacent_neighbors(location)).to eq neighbors
-
-
   end
+
+  it "returns the 8 adjacent neighbors of [2,3]" do
+    world = World.new(5)
+    location = Location.new(2,3)
+
+    neighbors = [[2,4], [3,4], [3,3], [3,2], [1,2], [2,2], [1,4], [1,3]]
+
+    expect(world.adjacent_neighbors(location)).to eq neighbors
+  end
+
 end
