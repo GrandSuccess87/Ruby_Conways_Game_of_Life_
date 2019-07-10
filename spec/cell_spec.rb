@@ -14,7 +14,7 @@ RSpec.describe Cell, "#cell" do
 
     cell.update_nonliving_cell_status
 
-    expect(cell.isAlive?).to eq true
+    expect(cell.alive).to eq true
   end
 
   it "updates a living cells status" do
@@ -23,6 +23,6 @@ RSpec.describe Cell, "#cell" do
     cell.update_nonliving_cell_status
     cell.update_living_status
 
-    expect(cell.isAlive?).to eq false
+    expect(cell.alive).to eq false
   end
 end

@@ -1,5 +1,6 @@
 require 'world'
 require 'location'
+require 'cell'
 
 RSpec.describe World, "#rows" do
     it "returns an empty world" do
@@ -54,7 +55,17 @@ RSpec.describe World, "#rows" do
       expect(rows.size).to eq 15
       expect(rows.first.size).to eq 15
     end
+
+    it "fills the world" do
+      world = World.new(10)
+      cell = Cell.new
+
+      world.fill_world(cell)
+
+      expect(world.cell_count).to eq 100
+    end
 end
+
 
 RSpec.describe World, "#neighbors" do
   it "returns no neighbors for an empty world" do
@@ -90,6 +101,15 @@ RSpec.describe World, "#neighbors" do
     neighbors = [[2,4], [3,4], [3,3], [3,2], [1,2], [2,2], [1,4], [1,3]]
 
     expect(world.adjacent_neighbors(location)).to eq neighbors
+  end
+
+  it "detects a grid space with no living cell" do
+    world = World.new(5)
+    location = Location.new(5,5)
+
+    is_living = world.is_living_cell_at_location?(location)
+
+    expect(is_living).to eq []
   end
 
 end
